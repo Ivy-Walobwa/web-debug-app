@@ -7,6 +7,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
-    devtool: 'source-map', // External source maps for production
+    devtool: 'eval-source-map', // External source maps for production
     // devtool: 'eval-source-map',// Fast inline source maps
 };
