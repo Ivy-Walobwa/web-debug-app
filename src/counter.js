@@ -1,9 +1,8 @@
 
+import { updateCache } from './counterCache.js';
 let count = 0;
 export function incrementCounter() {
-    const countCache = {}
-    countCache.total = () => count;
-    const totalCache = countCache.total();
+    const previousCount = count;
     count += 1;
-    console.log(`Counter: ${count} ${totalCache}`);
+    updateCache(count, previousCount);
 }
